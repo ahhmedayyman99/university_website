@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+/* Start Header */
+.header {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4,9,30,0.7)), url(../images/banner.png) ; 
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 6%;
+}
+nav img {
+    height: 55px;
+    margin-bottom: -15px;
+}
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 8px 15px;
+    position: relative;
+}
+.nav-links ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+}
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1 {
+    font-size: 62px;
+}
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.hero-btn {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover {
+    border: 1px solid #f44336;
+    background-color: #f44336;
+    transition: 1s;
+}
+nav .fa-solid {
+    display: none;
+}
+@media (max-width: 700px){
+    .text-box h1 {
+        font-size: 20px;
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    .nav-links {
+        position: fixed;
+        background-color: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa-solid {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul {
+        padding: 30px;
+    }
+}
+/*--- Start Course ---*/
+.course {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+p {
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col {
+    flex-basis: 31%;
+    background-color: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.course-col:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+.course-col h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+@media (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+/** Start Campus **/
+.campus {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+.campus .campus-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-top: 50px;
+}
+.campus-row .campus-col {
+    position: relative;
+}
+.campus-col img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+}
+.campus-col .info {
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.campus-col .info h3 {
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: 0.5s;
+}
+.campus-col .info:hover {
+    background-color: rgba(226, 0, 0, 0.7);
+}
+.campus-col .info:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+}
+/** Start Facilities */
+.facilities {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+.facilities .facilities-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+.facilities-col img {
+    width: 100%;
+    border-radius: 10px;
+}
+.facilities-col h3 {
+    text-align: left;
+    margin-top: 16px;
+    margin-bottom: 15px;
+}
+.facilities-col p {
+    padding: 0;
+    text-align: left;
+}
+/** Start Testimonials **/
+.testimonials {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+.testimonials-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-gap: 30px;
+    margin-top: 50px;
+}
+.testimonials-col {
+    background-color: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+    transition: 0.5s;
+}
+.testimonials-col img {
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 30px;
+    margin-left: 5px;
+}
+.testimonials-col .info {
+    text-align: left;
+}
+.testimonials-col h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.testimonials-col p {
+    padding: 0;
+}
+.testimonials-col i {
+    color: #f44336;
+}
+.testimonials-col:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 700px) {
+    .testimonials-row {
+        flex-direction: column;
+    }
+    .testimonials-col img {
+        margin-right: 15px;
+        margin-left: 0px;
+    }
+}
+@media (max-width: 550px) {
+    .testimonials-row {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+/** Call To Action **/
+.cta {
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 70px 0;
+}
+.cta h1 {
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+@media (max-width: 700px) {
+    .cta h1 {
+        font-size: 24px;
+    }
+}
+/** Footer **/
+.footer {
+    width: 100%;
+    text-align: center;
+}
+.footer .icons i {
+    font-size: 20px;
+    color: #f44336;
+    padding: 10px;
+    margin: 5px;
+}
+.footer p i {
+    color: #f44336;
+    font-size: 15px;
+}
